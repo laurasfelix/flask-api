@@ -7,9 +7,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    peep = project.build()
-
-    return render_template("index.html",peep = peep )
+    data = project.build()
+    return render_template("index.html",data=data)
 
 if __name__ == "__main__":
     app.run()
